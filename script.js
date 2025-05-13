@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero');
-  const heroText = document.querySelector('.hero-text');
+  const heroImage = document.querySelector('.hero-image');
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
@@ -10,6 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const scale = Math.max(0.4, 1 - scrollY / (maxHeight * 1.5));
 
     hero.style.height = `${newHeight}px`;
-    heroText.style.transform = `scale(${scale})`;
+    heroImage.style.transform = `scale(${scale})`;
   });
 });
