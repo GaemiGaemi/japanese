@@ -10,7 +10,6 @@ body {
   position: sticky;
   top: 0;
   height: 100vh;
-  background-image: url('TitleImage.PNG');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,15 +20,12 @@ body {
   z-index: 10;
   transform-origin: top;
 }
-
-.hero-content h1 {
-  color: white;
-  font-size: 4rem;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+.TitleImage
+{
+  whith:100%;
+  height:auto;
 }
-
-
+ 
 /* 두 번째 섹션 */
 .content {
   padding: 80px 20px;
