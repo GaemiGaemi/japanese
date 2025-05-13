@@ -21,6 +21,8 @@ body {
   object-fit: cover;
   transition: transform 0.3s ease;
   transform-origin: center;
+  will-change: transform;
+  display: block;
 }
 
 /* 두 번째 섹션 */
