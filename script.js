@@ -1,16 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero');
-  const heroImage = document.querySelector('.hero-image');
+  const heroText = document.querySelector('.hero-text');
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    const minHeight = 60; // 더 작게 줄어듦
+    const minHeight = 80;
     const maxHeight = window.innerHeight;
     const newHeight = Math.max(minHeight, maxHeight - scrollY);
-    const scale = Math.max(0.2, 1 - scrollY / (maxHeight * 1.2)); // 최소 0.2까지 줄어듦
+    const scale = Math.max(0.4, 1 - scrollY / (maxHeight * 1.5));
 
     hero.style.height = `${newHeight}px`;
-    heroImage.style.transform = `scale(${scale})`;
+    heroText.style.transform = `scale(${scale})`;
   });
 });
-
