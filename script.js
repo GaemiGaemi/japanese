@@ -1,15 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero');
-  const heroImage = document.querySelector('.hero-image');
+  const heroText = document.querySelector('.hero-content h1');
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    const minHeight = 80;
-    const maxHeight = window.innerHeight;
-    const newHeight = Math.max(minHeight, maxHeight - scrollY);
-    const scale = Math.max(0.4, 1 - scrollY / (maxHeight * 1.5));
+    const minScale = 0.3;
+    const scale = Math.max(minScale, 1 - scrollY / 1000);
 
-    hero.style.height = `${newHeight}px`;
-    heroImage.style.transform = `scale(${scale})`;
+    hero.style.transform = `scale(${scale})`;
+    heroText.style.transform = `scale(${scale})`;
   });
 });

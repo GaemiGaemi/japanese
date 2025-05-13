@@ -7,27 +7,28 @@ body {
 
 /* 첫 번째 섹션 - 전체 화면 이미지 */
 .hero {
-  height: 100vh;
-  overflow: hidden;
-  transition: height 0.3s ease;
   position: sticky;
   top: 0;
-  z-index: 10;
+  height: 100vh;
+  background-image: url('your-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: height 0.3s ease, transform 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
+  transform-origin: top;
 }
 
-.hero-image {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
+.hero-content h1 {
+  color: white;
+  font-size: 4rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
-  transform-origin: center;
-  will-change: transform;
-  display: block;
 }
+
 
 /* 두 번째 섹션 */
 .content {
