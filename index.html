@@ -3,49 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>스크롤 축소 히어로 + 가로 3칸</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .hero {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      transform-origin: top;
-      transition: all 0.3s ease;
-    }
-  </style>
+  <title>3칸 스크롤 페이지</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body>
+  <!-- 첫 번째 칸: 전체 화면 이미지 -->
+  <section class="hero">
+    <img src="your-image.jpg" alt="Hero Image" class="hero-image" />
+  </section>
 
-  <!-- 히어로 영역 (스크롤에 따라 축소) -->
-  <div id="hero" class="hero w-full h-96 bg-blue-600 text-white flex items-center justify-center text-6xl">
-    멋진 히어로 이미지/제목
-  </div>
+  <!-- 두 번째 칸: 일반 콘텐츠 -->
+  <section class="content">
+    <div class="content-inner">
+      <h2>두 번째 칸 콘텐츠</h2>
+      <p>여기에 원하는 내용을 입력하세요.</p>
+    </div>
+  </section>
 
-  <!-- 아래 3칸 (가로 3열 그리드) -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-6 py-12">
-    <div class="bg-white p-8 shadow rounded h-[120vh] flex items-center justify-center text-2xl">콘텐츠 1</div>
-    <div class="bg-white p-8 shadow rounded h-[120vh] flex items-center justify-center text-2xl">콘텐츠 2</div>
-    <div class="bg-white p-8 shadow rounded h-[120vh] flex items-center justify-center text-2xl">콘텐츠 3</div>
-  </div>
-
-  <!-- JS: 스크롤에 따라 히어로 크기 축소 -->
-  <script>
-    const hero = document.getElementById('hero');
-
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      const minHeight = 40;       // 최소 높이
-      const maxHeight = 384;      // 96 * 4 = 384px (tailwind h-96)
-      const height = Math.max(minHeight, maxHeight - scrollY);
-
-      const minFont = 1.2;        // 최소 폰트 크기 (rem)
-      const maxFont = 3.75;       // 약 60px
-      const fontSize = Math.max(minFont, maxFont - scrollY / 100);
-
-      hero.style.height = `${height}px`;
-      hero.style.fontSize = `${fontSize}rem`;
-    });
-  </script>
+  <!-- 세 번째 칸: 클릭 가능한 이미지 30개 -->
+  <section class="gallery">
+    <h2>이미지 갤러리</h2>
+    <div class="gallery-grid">
+      <!-- 예시 이미지 30개 -->
+      <!-- 나중에 JS 또는 반복문으로 자동 생성 가능 -->
+      <!-- 현재는 수동 예시 6개만 표시 -->
+      <a href="#"><img src="thumb1.jpg" alt="썸네일 1" /></a>
+      <a href="#"><img src="thumb2.jpg" alt="썸네일 2" /></a>
+      <a href="#"><img src="thumb3.jpg" alt="썸네일 3" /></a>
+      <a href="#"><img src="thumb4.jpg" alt="썸네일 4" /></a>
+      <a href="#"><img src="thumb5.jpg" alt="썸네일 5" /></a>
+      <a href="#"><img src="thumb6.jpg" alt="썸네일 6" /></a>
+      <!-- ... 더 추가 -->
+    </div>
+  </section>
 </body>
 </html>
