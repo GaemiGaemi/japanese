@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    const minHeight = 80;
+    const minHeight = 60; // 더 작게 줄어듦
     const maxHeight = window.innerHeight;
     const newHeight = Math.max(minHeight, maxHeight - scrollY);
-    const scale = Math.max(0.4, 1 - scrollY / (maxHeight * 1.5));
+    const scale = Math.max(0.2, 1 - scrollY / (maxHeight * 1.2)); // 최소 0.2까지 줄어듦
 
     hero.style.height = `${newHeight}px`;
     heroImage.style.transform = `scale(${scale})`;
   });
 });
+
