@@ -44,9 +44,9 @@ body, html {
 }
 .middle {
   margin-top: 100vh;
-  background: #f0f0f0;
+  background: white;
 }
 .third {
-  background: #e0e0e0;
+  background: white;
   height: 2000px;
 }
