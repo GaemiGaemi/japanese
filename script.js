@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    const minScale = 0.3;
+    const minScale = 0.15;
     const scale = Math.max(minScale, 1 - scrollY / 1000);
 
     hero.style.transform = `scale(${scale})`;
