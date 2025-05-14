@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const scale = Math.max(minScale, 1 - scrollY / 1000);
 
     hero.style.transform = `scale(${scale})`;
-    heroText.style.transform = `scale(${scale})`;
+    TitleImage.style.transform = `scale(${scale})`;
   });
 });
