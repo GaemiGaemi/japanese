@@ -38,6 +38,13 @@ body, html {
   transition: transform 0.3s ease;
 }
 
+.hero::after {
+  content: '';
+  display: block;
+  height: 100vh; /* 이만큼 밀어줘서 밑에 콘텐츠가 1번을 밀고 올라오지 않게 함 */
+}
+
+
 /* ✅ 2번칸 (중간) */
 .middle {
   padding: 100px;

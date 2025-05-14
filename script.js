@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroImg = document.querySelector('.hero img');
 
   const maxHeight = window.innerHeight;
-  const minHeight = 100;
+  const minHeight = 50;
 
   const updateHeroHeight = () => {
     const scrollY = window.scrollY;
@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     heroImg.style.transform = `scale(${scale})`;
   };
 
-  updateHeroHeight(); // 초기 적용
+  updateHeroHeight(); // 초기에 한 번 적용
   window.addEventListener('scroll', updateHeroHeight);
 });
