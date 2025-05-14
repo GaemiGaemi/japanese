@@ -24,6 +24,8 @@ body {
 {
     display:block;
     text-align: center;
+    width:100%;
+    background-color: white;
 }
  
 /* 두 번째 섹션 */
