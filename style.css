@@ -1,80 +1,55 @@
-/* style.css */
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
   font-family: sans-serif;
-  background-color: white;
-  overflow: visible;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
   width: 100%;
 }
 
-/* 첫 번째 섹션 - 전체 화면 이미지 */
+/* ✅ 1번 칸 */
 .hero {
   position: sticky;
   top: 0;
   height: 100vh;
-  width: 100%;
-  transition: height 0.3s ease, transform 0.3s ease;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: height 0.3s ease;
   z-index: 10;
-  transform-origin: top;
-  background-color: white;
+  overflow: hidden;
 }
 
-.TitleImage
-{
-    display:block;
-    text-align: center;
-    width:100%;
-    background-color: white;
-}
- 
-/* 두 번째 섹션 */
-.content {
-  padding: 80px 20px;
-  background-color: #f1cfcf;
-  text-align: center;
-}
-
-.content-inner {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* 세 번째 섹션 - 이미지 갤러리 */
-.gallery {
-  padding: 100px 20px;
-  background-color: #f0f0f0;
-  min-height: 200vh;
-}
-
-.gallery h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 16px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.gallery-grid a {
-  display: block;
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-}
-
-.gallery-grid a:hover {
-  border-color: #0077ff;
-}
-
-.gallery-grid img {
-  width: 100%;
+.hero img {
+  max-width: 100%;
   height: auto;
-  display: block;
-  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* ✅ 2번칸 (중간) */
+.middle {
+  padding: 100px;
+  background: #f0f0f0;
+}
+
+/* ✅ 3번칸 */
+.third {
+  background: #e0e0e0;
+  padding: 100px;
+}
+
+.spacer {
+  height: 2000px; /* 충분한 스크롤 */
 }

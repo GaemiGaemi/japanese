@@ -1,13 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero');
-  const heroText = document.querySelector('.TitleImage');
+  const heroImg = document.querySelector('.hero img');
 
-  window.addEventListener('scroll', () => {
+  const maxHeight = window.innerHeight;
+  const minHeight = 100;
+
+  const updateHeroHeight = () => {
     const scrollY = window.scrollY;
-    const minScale = 0.1;
-    const scale = Math.max(minScale, 1 - scrollY / 1000);
+    const newHeight = Math.max(minHeight, maxHeight - scrollY);
+    hero.style.height = `${newHeight}px`;
 
-    hero.style.transform = `scale(${scale})`;
-    TitleImage.style.transform = `scale(${scale})`;
-  });
+    const scale = Math.max(0.3, 1 - scrollY / 1000);
+    heroImg.style.transform = `scale(${scale})`;
+  };
+
+  updateHeroHeight(); // 초기 적용
+  window.addEventListener('scroll', updateHeroHeight);
 });
