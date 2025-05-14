@@ -17,10 +17,13 @@ body {
   z-index: 10;
   transform-origin: top;
 }
+
 .TitleImage
 {
+  display:block;
   whith:100%;
   height:auto;
+  margin:0;
 }
  
 /* 두 번째 섹션 */
