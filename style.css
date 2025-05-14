@@ -4,6 +4,7 @@ body {
   font-family: sans-serif;
   background-color: white;
   overflow: visible;
+  width: 100%;
 }
 
 /* 첫 번째 섹션 - 전체 화면 이미지 */
