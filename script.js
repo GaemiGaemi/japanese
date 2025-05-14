@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     heroImg.style.transform = `scale(${scale})`;
   };
 
-  updateHeroHeight(); // 초기에 한 번 적용
+  updateHeroHeight();
   window.addEventListener('scroll', updateHeroHeight);
 });
