@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero');
-  const heroText = document.querySelector('.hero-content h1');
+  const heroText = document.querySelector('.TitleImage');
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
