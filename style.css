@@ -78,3 +78,51 @@ body, html {
   right: 20px;
   z-index: 1100;
 }
+
+
+
+
+
+/* ad */
+.floating-ad {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 160px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 9999;
+  animation: floatIn 0.3s ease-out;
+}
+
+.floating-ad img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ad-close-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  border: none;
+  background: #fff;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 6px;
+  line-height: 1;
+}
+
+@keyframes floatIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
