@@ -21,9 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-function openMenu() {
-  document.getElementById("menu").style.display = "flex";
-}
-function closeMenu() {
-  document.getElementById("menu").style.display = "none";
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const menu = document.getElementById("menu");
+  const openBtn = document.getElementById("menuOpenBtn");
+  const closeBtn = document.getElementById("menuCloseBtn");
+
+  openBtn.addEventListener("click", () => {
+    menu.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.style.display = "none";
+  });
+
+  // 오버레이 바깥 클릭하면 닫기
+  menu.addEventListener("click", (e) => {
+    if (e.target === menu) {
+      menu.style.display = "none";
+    }
+  });
+});
