@@ -6,7 +6,6 @@ collections:
 
 
 title: GeamiGeami Japanese
-#email: your-email@example.com
 description: Japanese Page
 
 url: "https://gaemigaemi.github.io/japanese/" # the base hostname & protocol for your site, e.g. http://example.com
@@ -17,6 +16,6 @@ url: "https://gaemigaemi.github.io/japanese/" # the base hostname & protocol for
 
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
