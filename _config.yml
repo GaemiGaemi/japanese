@@ -8,7 +8,7 @@ collections:
 title: GeamiGeami Japanese
 description: Japanese Page
 
-url: "https://gaemigaemi.github.io/japanese/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://gaemigaemi.github.io/japanese" # the base hostname & protocol for your site, e.g. http://example.com
 #baseurl: "" # the subpath of your site, e.g. /blog
 #twitter_username: jekyllrb
 #github_username:  jekyll

@@ -1,13 +1,34 @@
 <!doctype html>
-<html lang="ko">
+<html>
   <head>
     {% include head.html %}
   </head>
-  
   <body>
-  
+  <div class="container">
+    <!-- 1번: Hero 영역 -->
+    <section class="section hero">
+      <img src="{{ '/assets/img/TitleImage.png' | relative_url }}" alt="TITLE IMG">
+    </section>
 
+    <!-- 2번: Middle 영역 -->
+    <section class="section middle">
+      {{ content }} <!-- index.html 등에서 전달되는 내용 -->
+    </section>
+
+    <!-- 3번: Thrid 영역 -->
+    <section class="section third"> 
+      <p> THIS IS Third box</p>
+    </section>
+
+    <!-- 4번: Footer 영역 -->
+    <footer class="footer">
+      <p> THIS IS FOOTER</p>
+    </footer>
+  </div>
   <script src="{{ '/assets/script.js' | relative_url }}"></script>
-  </body>
+  {% if page.floating_ad %}
+  {% include floating-ad.html %}
+  {% endif %}
+</body>
 </html>
 
