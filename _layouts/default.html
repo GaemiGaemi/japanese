@@ -12,7 +12,11 @@
 
     <!-- 2번: Middle 영역 -->
     <section class="section middle">
-      {{ content }} <!-- index.html 등에서 전달되는 내용 -->
+      <div class="curri" id="curri_1">
+
+      </div>
+
+
     </section>
 
     <!-- 3번: Thrid 영역 -->
@@ -26,24 +30,13 @@
     </footer>
   </div>
 
-  <!-- 메뉴 버튼 -->
-  <div class="menu-btn" id="menuOpenBtn">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-   
-  <!-- 메뉴 오버레이 -->
-  <div class="menu-overlay" id="menu">
-    <div class="menu-content">
-      <a href="https://gaemigaemi.github.io/science">홈</a>
-      <a href="#">정보</a>
-      <a href="https://gaemigaemi.github.io/">Contact</a>
-    <button id="menuCloseBtn">X</button>
-    </div>
-  </div>
 
   <script src="{{ '/assets/script.js' | relative_url }}"></script>
   {% if page.floating_ad %}
   {% include floating-ad.html %}
+  {% endif %}
+  {% if page.hammenu %}
+  {% include menu.html %}
   {% endif %}
 </body>
 </html>
