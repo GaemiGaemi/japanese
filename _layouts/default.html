@@ -32,10 +32,13 @@
 
 
   <script src="{{ '/assets/script.js' | relative_url }}"></script>
-  {% if page.floating_ad %}
-  {% include floating-ad.html %}
-  {% endif %}
+{% if page.floating_ad %}
+{% include floating-ad.html %}
+{% endif %}
 
+{% if page.hammenu %}
+{% include menu.html %}
+{% endif %}  
 </body>
 </html>
 
