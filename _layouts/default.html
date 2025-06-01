@@ -21,7 +21,7 @@
         <div class="curri_wrap">
           {% assign posts_in_cur = site.elements | where: "curri", cur.id %}
           {% for post in posts_in_cur %}
-          <div class="curri_box">
+          <div class="curri_box" id="curri_box_{{ cur.id }}">
             <a href="{{ post.url | relative_url }}"
              class="post {{ post.group }}"
             style="grid-column:{{ post.col }}; grid-row:{{ post.row }};">
