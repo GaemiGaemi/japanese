@@ -42,19 +42,13 @@ body, html {
 }
 
 /* ✅ 2번칸 (중간) */
-.middle, .third {
+.middle {
   margin: 0 auto;
   padding: 3% 1%;
   justify-content: center;
-}
-.middle {
   padding-top: 110dvh;
   height:500px;
   background-color: rgb(255, 170, 170);
-}
-.third {
-  background: white;
-  height: 2000px;
 }
 
 .footer {
