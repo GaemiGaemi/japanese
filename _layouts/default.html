@@ -19,7 +19,7 @@
         </div>
 
         <div class="curri_wrap">
-          {% assign posts_in_cur = site.posts | where: "curri", cur.id %}
+          {% assign posts_in_cur = site.elements | where: "curri", cur.id %}
           {% for post in posts_in_cur %}
           <div class="curri_box">
             <a href="{{ post.url | relative_url }}"
