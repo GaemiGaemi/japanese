@@ -12,12 +12,12 @@
 
     <!-- 2번: Middle 영역 -->
     {%- assign grouped = site.elements | group_by:"curri" | sort: "name" -%}
-      
+
     <section class="section middle">
       {% for g in grouped %}
         {%- assign curri_id = g.name -%}
         <div class="curri" id="curri_{{ curri_id }}">
-          <h1>#{{ curri_id }}</h1>   {# ← 제목 자동 #}
+          <h1>#{{ curri_id }}</h1> 
         </div>
 
         <div class="curri_wrap">
