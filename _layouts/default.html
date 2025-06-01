@@ -12,28 +12,27 @@
 
     <!-- 2번: Middle 영역 -->
     <section class="section middle">
-
-        {% for cur in site.data.curriculum %}
+      {% for cur in site.data.curriculum %}
         <div class="curri" id="curri_{{ cur.id }}">
           <h1>{{ cur.title }}</h1>
         </div>
 
         <div class="curri_wrap">
-          {% assign posts_in_cur = site.elements | where: "curri", cur.id %}
+          {%- assign posts_in_cur = site.elements | where:"curri", cur.id -%}
+         <!-- DEBUG {{ cur.id }} = {{ posts_in_cur | size }}개 -->
           {% for post in posts_in_cur %}
-          <div class="curri_box" id="curri_box_{{ cur.id }}">
+          <div class="curri_box" id="curri_box_{{ cur.id }}_{{ forloop.index }}">
             <a href="{{ post.url | relative_url }}"
-             class="post {{ post.group }}"
-            style="grid-column:{{ post.col }}; grid-row:{{ post.row }};">
-          {% if post.title %}
-          <span class="title">{{ post.title }}</span>
-          {% endif %}
-          </a>
+              class="post {{ post.group }}"
+              style="grid-column:{{ post.col }}; grid-row:{{ post.row }};">
+             {% if post.title %}
+                <span class="title">{{ post.title }}</span>
+             {% endif %}
+           </a>
           </div>
         {% endfor %}
-         </div>
-        {% endfor %}
-      
+      </div>
+    {% endfor %}
     </section>
 
     <footer class="footer">
