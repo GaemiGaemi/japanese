@@ -1,7 +1,7 @@
 ---
 layout: page_basic
 title: test
-curri: 2        
+curri: 2
 row: 1
 col: 1
 ---
