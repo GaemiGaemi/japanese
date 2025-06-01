@@ -11,28 +11,27 @@
     </section>
 
     <!-- 2번: Middle 영역 -->
+    {%- assign grouped = site.elements | group_by:"curri" | sort: "name" -%}
+      
     <section class="section middle">
-      {% for cur in site.data.curriculum %}
-        <div class="curri" id="curri_{{ cur.id }}">
-          <h1>{{ cur.title }}</h1>
+      {% for g in grouped %}
+        {%- assign curri_id = g.name -%}
+        <div class="curri" id="curri_{{ curri_id }}">
+          <h1>#{{ curri_id }}</h1>   {# ← 제목 자동 #}
         </div>
 
         <div class="curri_wrap">
-          {%- assign posts_in_cur = site.elements | where:"curri", cur.id -%}
-         <!-- DEBUG {{ cur.id }} = {{ posts_in_cur | size }}개 -->
-          {% for post in posts_in_cur %}
-          <div class="curri_box" id="curri_box_{{ cur.id }}_{{ forloop.index }}">
-            <a href="{{ post.url | relative_url }}"
-              class="post {{ post.group }}"
-              style="grid-column:{{ post.col }}; grid-row:{{ post.row }};">
-             {% if post.title %}
-                <span class="title">{{ post.title }}</span>
-             {% endif %}
-           </a>
-          </div>
-        {% endfor %}
-      </div>
-    {% endfor %}
+         {% for post in g.items %}
+            <div class="curri_box" id="curri_box_{{ curri_id }}_{{ forloop.index }}">
+             <a href="{{ post.url | relative_url }}"
+                 class="post {{ post.group }}"
+                style="grid-column:{{ post.col }}; grid-row:{{ post.row }};">
+               <span class="title">{{ post.title }}</span>
+              </a>
+            </div>
+         {% endfor %}
+       </div>
+      {% endfor %}
     </section>
 
     <footer class="footer">
