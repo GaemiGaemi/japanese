@@ -1,8 +1,8 @@
 collections:
   elements:
     output: true
-    permalink: /post/:title/
-    directory: "_post"  
+    permalink: /posts/:title/
+    directory: "_posts"  
 
 
 title: GeamiGeami Japanese
